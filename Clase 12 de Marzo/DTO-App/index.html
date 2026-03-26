@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>DTO - Digital Tourism Offices</title>
+    <meta name="description" content="Aplicación de turismo para Mérida, Yucatán con reservas y comunidad.">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">¡Reserva confirmada con éxito!</div>
+
+    <!-- Main Content Area -->
+    <main id="app-container">
+        
+        <!-- INICIO VIEW -->
+        <section id="view-inicio" class="view active">
+            <header class="hero">
+                <div class="hero-overlay"></div>
+                <img src="https://images.unsplash.com/photo-1518182170546-076616fdcbca?auto=format&fit=crop&q=80&w=1000" alt="Mérida Yucatán" class="hero-bg">
+                <div class="hero-content">
+                    <span class="badge">Tour Oficial</span>
+                    <h1>Mérida</h1>
+                    <p>Yucatán, México</p>
+                </div>
+            </header>
+            
+            <div class="content-padding">
+                <div class="section-header">
+                    <h2 class="section-title">Lugares representativos</h2>
+                    <a href="#" class="see-all">Ver todos</a>
+                </div>
+                <div class="places-grid">
+                    <!-- Cards -->
+                    <article class="place-card glass-panel">
+                        <img src="https://images.unsplash.com/photo-1584974292709-5c2f0619971b?auto=format&fit=crop&q=80&w=600" alt="Chichén Itzá">
+                        <div class="card-info">
+                            <h3>Chichén Itzá</h3>
+                            <p>Maravilla del mundo antiguo</p>
+                        </div>
+                    </article>
+                    <article class="place-card glass-panel">
+                        <img src="https://images.unsplash.com/photo-1518544866330-1f99c277bfcc?auto=format&fit=crop&q=80&w=600" alt="Cenote Suytun">
+                        <div class="card-info">
+                            <h3>Cenote Suytun</h3>
+                            <p>Aguas cristalinas subterráneas</p>
+                        </div>
+                    </article>
+                    <article class="place-card glass-panel">
+                        <img src="https://images.unsplash.com/photo-1596422846543-74ec9cdefec6?auto=format&fit=crop&q=80&w=600" alt="Paseo de Montejo">
+                        <div class="card-info">
+                            <h3>Paseo de Montejo</h3>
+                            <p>Avenida histórica y cultural</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPRA VIEW -->
+        <section id="view-compra" class="view">
+            <div class="content-padding top-spacing">
+                <header class="page-header">
+                    <h2 class="page-title">Reservas</h2>
+                    <p class="subtitle">Explora y reserva tu próxima aventura</p>
+                </header>
+                
+                <div class="tabs-container glass-panel">
+                    <button class="tab-btn active" data-tab="servicios">Tours & Servicios</button>
+                    <button class="tab-btn" data-tab="restaurantes">Restaurantes</button>
+                </div>
+
+                <div id="tab-servicios" class="tab-content active">
+                    <article class="service-card glass-panel">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1588612143714-3862ec7100b4?auto=format&fit=crop&q=80&w=600" alt="Tour Chichén">
+                        </div>
+                        <div class="service-details">
+                            <span class="tag">Más Popular</span>
+                            <h3>Tour Chichén Itzá VIP</h3>
+                            <div class="rating"><span class="material-icons-outlined star">star</span> 4.9 (120 res.)</div>
+                            <div class="card-footer">
+                                <p class="price">$1,200 <small>MXN</small></p>
+                                <button class="btn-primary reserve-btn">Reservar</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="service-card glass-panel">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1544551763-92ab8f93630f?auto=format&fit=crop&q=80&w=600" alt="Tour Cenotes">
+                        </div>
+                        <div class="service-details">
+                            <span class="tag tag-nature">Naturaleza</span>
+                            <h3>Ruta de los Cenotes</h3>
+                            <div class="rating"><span class="material-icons-outlined star">star</span> 4.8 (85 res.)</div>
+                            <div class="card-footer">
+                                <p class="price">$850 <small>MXN</small></p>
+                                <button class="btn-primary reserve-btn">Reservar</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div id="tab-restaurantes" class="tab-content">
+                    <article class="service-card glass-panel">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=600" alt="La Tradición">
+                        </div>
+                        <div class="service-details">
+                            <span class="tag tag-food">Gastronomía</span>
+                            <h3>La Tradición</h3>
+                            <div class="rating"><span class="material-icons-outlined star">star</span> 4.7 (210 res.)</div>
+                            <div class="card-footer">
+                                <p class="price">$$ <small>Yucateca</small></p>
+                                <button class="btn-primary reserve-btn">Mesa</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="service-card glass-panel">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=600" alt="Micaela">
+                        </div>
+                        <div class="service-details">
+                            <span class="tag tag-food">Premium</span>
+                            <h3>Micaela Mar & Leña</h3>
+                            <div class="rating"><span class="material-icons-outlined star">star</span> 4.9 (340 res.)</div>
+                            <div class="card-footer">
+                                <p class="price">$$$ <small>Mariscos</small></p>
+                                <button class="btn-primary reserve-btn">Mesa</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- VISITAS VIEW -->
+        <section id="view-visitas" class="view">
+            <div class="content-padding top-spacing">
+                <header class="page-header">
+                    <h2 class="page-title">Comunidad</h2>
+                    <p class="subtitle">Experiencias de otros viajeros</p>
+                </header>
+
+                <div class="comments-feed" id="comments-feed">
+                    <!-- Default Comments -->
+                    <div class="comment-card glass-panel">
+                        <div class="comment-header">
+                            <div class="avatar" style="background: linear-gradient(135deg, #FF6B6B, #FF8E53);">A</div>
+                            <div class="user-info">
+                                <h4>Ana García</h4>
+                                <span>Hace 2 horas</span>
+                            </div>
+                        </div>
+                        <p class="comment-text">¡Mérida es hermosa! Recomiendo muchísimo probar la cochinita pibil en el mercado de Santa Ana. El trato de la gente es excepcional.</p>
+                        <div class="comment-actions">
+                            <button class="action-btn"><span class="material-icons-outlined">favorite_border</span> 12</button>
+                        </div>
+                    </div>
+                    <div class="comment-card glass-panel">
+                        <div class="comment-header">
+                            <div class="avatar" style="background: var(--accent-gradient)">C</div>
+                            <div class="user-info">
+                                <h4>Carlos Ruiz</h4>
+                                <span>Ayer</span>
+                            </div>
+                        </div>
+                        <img class="comment-img" src="https://images.unsplash.com/photo-1518182170546-076616fdcbca?auto=format&fit=crop&q=80&w=600" alt="Mérida">
+                        <p class="comment-text">Un paseo por la noche en el centro histórico es obligatorio. La arquitectura colonial te transporta a otra época.</p>
+                        <div class="comment-actions">
+                            <button class="action-btn"><span class="material-icons-outlined">favorite_border</span> 45</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spacer for FAB -->
+                <div style="height: 80px;"></div>
+
+                <!-- Floating Action Button for adding comments -->
+                <button class="fab" id="fab-comment">
+                    <span class="material-icons-outlined">add</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for New Comment -->
+    <div class="modal-overlay" id="comment-modal">
+        <div class="modal-content glass-panel">
+            <div class="modal-header">
+                <h3>Dejar un comentario</h3>
+                <button class="close-btn" id="close-modal"><span class="material-icons-outlined">close</span></button>
+            </div>
+            <form id="comment-form">
+                <div class="form-group">
+                    <label for="user-name">Tu Nombre</label>
+                    <input type="text" id="user-name" placeholder="Ej. María López" required>
+                </div>
+                <div class="form-group">
+                    <label for="user-comment">Tu Experiencia</label>
+                    <textarea id="user-comment" rows="4" placeholder="¡Cuéntanos qué te pareció el viaje!" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary full-width">Publicar Experiencia</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav glass-panel">
+        <button class="nav-item active" data-view="inicio">
+            <span class="material-icons-outlined">home</span>
+            <span>Inicio</span>
+        </button>
+        <button class="nav-item" data-view="compra">
+            <span class="material-icons-outlined">local_mall</span>
+            <span>Compra</span>
+        </button>
+        <button class="nav-item" data-view="visitas">
+            <span class="material-icons-outlined">forum</span>
+            <span>Visitas</span>
+        </button>
+    </nav>
+
+    <script src="app.js"></script>
+</body>
+</html>
